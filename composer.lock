@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0fefc3f4a55dfb04c8e74b55efe7f04b",
+    "content-hash": "0ad061fd69c7428962c4129c4ba16d07",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4004,6 +4004,60 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "davejamesmiller/laravel-route-browser",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/davejamesmiller/laravel-route-browser.git",
+                "reference": "bc10cc768e7dc3775058b8f9ecf0b65f4e8e268c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/davejamesmiller/laravel-route-browser/zipball/bc10cc768e7dc3775058b8f9ecf0b65f4e8e268c",
+                "reference": "bc10cc768e7dc3775058b8f9ecf0b65f4e8e268c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": ">=5.6",
+                "illuminate/view": ">=5.6",
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "orchestra/testbench": ">=3.6",
+                "php-coveralls/php-coveralls": "^2.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "DaveJamesMiller\\RouteBrowser\\RouteBrowserServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DaveJamesMiller\\RouteBrowser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dave James Miller",
+                    "email": "dave@davejamesmiller.com"
+                }
+            ],
+            "description": "A web-based route list GUI for Laravel.",
+            "homepage": "https://github.com/davejamesmiller/laravel-route-browser",
+            "keywords": [
+                "laravel"
+            ],
+            "time": "2020-01-02T16:16:55+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.3.0",

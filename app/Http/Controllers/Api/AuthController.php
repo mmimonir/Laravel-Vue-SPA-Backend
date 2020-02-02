@@ -9,7 +9,6 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Passport\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -26,7 +25,14 @@ class AuthController extends Controller
 
         ];
         $tokenRequest = Request::create('/oauth/token', 'post', $data);
-        return app()->handle($tokenRequest, $request->email);
+        $tokenResponse = app()->handle($tokenRequest);
+        $contentString = $tokenResponse->content();
+        $tokenContent = json_decode($contentString, true);
+
+        if (!empty($tokenContent['access_token'])) {
+            return $tokenResponse;
+        }
+        return response()->json(['message'=>'Unauthenticated']);
     }
     // public function login(Request $request)
     // {
